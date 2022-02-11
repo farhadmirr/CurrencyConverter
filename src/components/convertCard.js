@@ -2,7 +2,6 @@ import "../convertCard.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import ResModal from "./modal";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 

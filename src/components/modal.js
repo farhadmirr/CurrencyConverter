@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from "react-bootstrap/Modal";
-import React, { useState } from 'react';
+import React from 'react';
 
 function converter(props) {
     switch (props.target) {
@@ -14,6 +14,8 @@ function converter(props) {
             return props.sourceVal*0.019
         case "GBP":
             return props.sourceVal*0.0098
+            default:
+                return 0
     }
 }
 function ResModal(props) {
