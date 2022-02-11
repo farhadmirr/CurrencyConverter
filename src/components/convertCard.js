@@ -29,14 +29,17 @@ function ConvertCard(props){
             alert("Please Enter Source")
         }
     }
+    const onSubmit = (e) => {
+        e.preventDefault();
+      };
     return(
         <div className="cardBg col-md-3 d-flex flex-column align-items-center justify-content-start gap-5">
             <h2 className="fs-4 fw-bold text-dark">{props.title}</h2>
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="form-group">
                   <label for="exampleInputEmail1">{props.source}</label>
-                  <input type="email" className="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder={"Enter " + props.source} onChange={handleSourceChange}/>
-                  <small id="emailHelp" className="form-text text-muted">Enter the currency you want to convert</small>
+                  <input type="number" className="form-control" aria-describedby="Help" placeholder={"Enter " + props.source} onChange={handleSourceChange}/>
+                  <small id="Help" className="form-text text-muted">Enter the currency you want to convert</small>
                 </div>
                 <button type="submit" className="btn btn-primary mt-4" onClick={ShowDecider}>Convert</button>
             </form>
